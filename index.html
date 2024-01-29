@@ -35,13 +35,15 @@
     <!------------------ Section: gallery-up ------------------>
     <!-- Section: "transform" -->
     <section class="transform gallery-up">
-      <div>
+      <div id="text-gallery-up">
         <h2>Transform your <span>brand</span> </h2>
         <p>
           We are a full-service creative agency specializing in helping brands grow fast.
           Engage your clients through compelling visuals that do most of the marketing for you.
         </p>
-        <div class="btn">Learn more</div>
+        <div class="btn">
+          <div>Learn more</div>
+        </div>
       </div>
       <div id="transform-img"><img src="./assets/img/mobile/image-transform.jpg" alt="image-transform"></div>
     </section>
@@ -49,21 +51,30 @@
     <!-- Section: "stand-out" -->
     <section class="stand-out gallery-up">
       <div id="stand-out-img"><img src="./assets/img/mobile/image-stand-out.jpg" alt="image-stand-out"></div>
-      <div>
-        <h2>Stand out to the right audience</h2>
+
+      <div id="text-gallery-up">
+        <h2>Stand out to the right <span>audience</span></h2>
         <p>
-          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
+          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+          we’ll
           build
           and extend your brand in digital places.
         </p>
-        <div class="btn btn-pink">Learn more</div>
+        <div class="btn btn-pink">
+          <div>Learn more</div>
+        </div>
       </div>
     </section>
 
     <!----------------- Section: "cerise-orange" --------------->
     <section id="cerise-orange">
       <div id="cerise">
-        <div id="cerise-img"><img src="./assets/img/mobile/image-graphic-design.jpg" alt="image-graphic-design"></div>
+        <div>
+          <img class="mobile-img" src="./assets/img/mobile/image-graphic-design.jpg" alt="image-graphic-design">
+
+          <img class="desktop-img" src="./assets/img/desktop/image-graphic-design.jpg" alt="image-graphic-design">
+        </div>
+
         <div id="text">
           <h3>Graphic design</h3>
           <p>
@@ -75,7 +86,11 @@
       </div>
 
       <div id="orange">
-        <div><img src="./assets/img/mobile/image-photography.jpg" alt="image-photography"></div>
+        <div>
+          <img class="mobile-img" src="./assets/img/mobile/image-photography.jpg" alt="image-photography">
+
+          <img class="desktop-img" src="./assets/img/desktop/image-photography.jpg" alt="image-graphic-design">
+        </div>
         <div id="text">
           <h3>Photography</h3>
           <p>
@@ -90,36 +105,38 @@
     <section id="testimonials">
       <h4>Client testimonials</h4>
       <!-- card-1 -->
-      <div id="client-card">
-        <div id="client-img"><img src="./assets/img/image-emily.jpg" alt="client-photo"></div>
-        <p>
-          We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
-          hit.
-        </p>
-        <p class="client-name">Emily R.</p>
-        <p class="client-profession">Marketing Director</p>
-      </div>
+      <div id="cards">
+        <div id="client-card">
+          <div id="client-img"><img src="./assets/img/image-emily.jpg" alt="client-photo"></div>
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
+            hit.
+          </p>
+          <p class="client-name">Emily R.</p>
+          <p class="client-profession">Marketing Director</p>
+        </div>
 
-      <!-- card-2 -->
-      <div id="client-card">
-        <div id="client-img"><img src="./assets/img/image-thomas.jpg" alt="client-photo"></div>
-        <p>
-          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
-          enjoyable
-          experience.
-        </p>
-        <p class="client-name">Thomas S.</p>
-        <p class="client-profession">Chief Operating Officer</p>
-      </div>
+        <!-- card-2 -->
+        <div id="client-card">
+          <div id="client-img"><img src="./assets/img/image-thomas.jpg" alt="client-photo"></div>
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+            enjoyable
+            experience.
+          </p>
+          <p class="client-name">Thomas S.</p>
+          <p class="client-profession">Chief Operating Officer</p>
+        </div>
 
-      <!-- card-3 -->
-      <div id="client-card">
-        <div id="client-img"><img src="./assets/img/image-jennie.jpg" alt="client-photo"></div>
-        <p>
-          Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-        </p>
-        <p class="client-name">Jennie F.</p>
-        <p class="client-profession">Business Owner</p>
+        <!-- card-3 -->
+        <div id="client-card">
+          <div id="client-img"><img src="./assets/img/image-jennie.jpg" alt="client-photo"></div>
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+          </p>
+          <p class="client-name">Jennie F.</p>
+          <p class="client-profession">Business Owner</p>
+        </div>
       </div>
     </section>
 

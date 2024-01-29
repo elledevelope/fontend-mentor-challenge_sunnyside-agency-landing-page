@@ -1,6 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
-  /* CSS RESET */
+  /* -------------------- CSS RESET --------------------*/
   * {
       margin: 0;
       padding: 0;
@@ -10,6 +10,17 @@
   img,
   input {
       width: 100%;
+      vertical-align: bottom;
+  }
+
+  ul {
+      list-style: none;
+      cursor: pointer;
+  }
+
+  a {
+      text-decoration: none;
+      cursor: pointer;
   }
 
   body {
@@ -30,6 +41,7 @@
       font-family: 'Barlow';
   }
 
+  /* ------------------------------------------------------ Header, nav ------------------------------------------------------ */
   header {
       background-image: url(/assets/img/mobile/image-header.jpg);
       background-attachment: fixed;
@@ -41,11 +53,37 @@
 
   header ul {
       display: none;
+      /* background-color: var(--white); */
+      width: 90%;
+      height: 35vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 2;
+      position: absolute;
+      top: 20px;
   }
 
-  /* --------------- nav --------------- */
-  /* --------------- nav --------------- */
-  /* --------------- nav --------------- */
+  header ul li {
+      display: none;
+      color: var(--grayish-blue);
+      font-size: 1.2rem;
+      margin: 15px;
+      padding: 10px 20px;
+      transition: all 0.5s linear;
+
+  }
+
+  header ul li:hover {
+      background-color: var(--yellow);
+      border-radius: 20px;
+      color: black;
+      text-transform: uppercase;
+      /* font-family: 'Fraunces';  */
+
+  }
+
   nav #logo {
       width: 120px;
   }
@@ -53,6 +91,7 @@
   nav #burger {
       width: 20px;
       height: 20px;
+      display: none;
   }
 
   nav {
@@ -80,12 +119,11 @@
       align-items: center;
       width: 35px;
       margin: auto;
-      padding-top: 40px;
+      padding-top: 25px;
   }
 
 
-  /* Section: "gallery-up"  */
-  /* Section: "gallery-up"  */
+  /* ------------------------------------------------- Section: "gallery-up" ------------------------------------------------------ */
   .transform {
       display: flex;
       flex-direction: column-reverse;
@@ -111,6 +149,12 @@
       line-height: 25px;
   }
 
+  .gallery-up img {
+      display: block;
+      border: none;
+      outline: none;
+  }
+
   .gallery-up .btn {
       background-color: rgba(255, 255, 255, 0);
       font-family: 'Fraunces';
@@ -129,19 +173,26 @@
       border-bottom: 5px solid var(--soft-red);
   }
 
-  /* Section: "cerise-orange"  */
-  /* Section: "cerise-orange"  */
+  /* -------------------------------------------------  Section: "cerise-orange" ------------------------------------------------------ */
+
+  #cerise-orange .mobile-img {
+      display: block;
+  }
+
+  #cerise-orange .desktop-img {
+      display: none;
+  }
+
   #cerise-orange #cerise,
   #orange {
       position: relative;
   }
 
-  #cerise-orange #cerise-img img {
+  /* #cerise-orange #cerise-img img {
       display: block;
       border: none;
       outline: none;
-  }
-
+  } */
 
   #cerise-orange #text {
       position: absolute;
@@ -152,23 +203,18 @@
   #cerise-orange h3 {
       font-family: 'Fraunces';
       font-weight: 900;
+      color: var(--dark-desaturated-cyan);
   }
 
   #cerise-orange p {
       font-weight: 600;
       padding: 20px;
       line-height: 25px;
-      color: var(---dark-desaturated-cyan);
+      color: var(--dark-desaturated-cyan);
   }
 
-  #cerise h3,
-  p {
-      color: var(---dark-blue);
-  }
 
-  /* Section: "testimonials" */
-  /* Section: "testimonials" */
-  /* Section: "testimonials" */
+  /* ------------------------------------------------- Section: "testimonials" ------------------------------------------------------ */
   #testimonials h4 {
       font-family: 'Fraunces';
       font-weight: 900;
@@ -220,9 +266,7 @@
       padding-bottom: 50px;
   }
 
-  /*  Section: "gallery-down" */
-  /*  Section: "gallery-down" */
-  /*  Section: "gallery-down" */
+  /* ------------------------------------------------- Section: "gallery-down" ------------------------------------------------------ */
   #gallery-down {
       display: flex;
       flex-wrap: wrap;
@@ -234,9 +278,7 @@
       outline: none;
   }
 
-  /* Footer */
-  /* Footer */
-  /* Footer */
+  /* ----------------------------------------------------- Footer ---------------------------------------------------------- */
   footer {
       background-color: var(--dark-moderate-cyan);
   }
@@ -254,6 +296,8 @@
   }
 
   footer #logo-footer {
+      filter: invert(100%);
+      opacity: .5;
       width: 150px;
       margin: auto;
       padding: 50px 0;
@@ -274,9 +318,10 @@
   }
 
   footer #social-icons img:hover {
-    color: var(--white);
-    cursor: pointer;
-}
+      filter: invert(100%);
+      opacity: .5;
+      cursor: pointer;
+  }
 
   .attribution {
       text-align: center;
@@ -290,4 +335,156 @@
       text-decoration: none;
       cursor: pointer;
       color: var(--dark-blue);
+  }
+
+
+  /* =========================================================== Media Query =========================================================== */
+  @media screen and (min-width: 576px) {
+
+      /* media query: header, nav  */
+      header {
+          background-image: url(/assets/img/desktop/image-header.jpg);
+          height: 100vh;
+      }
+
+      nav #burger {
+          display: none;
+      }
+
+      nav ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          list-style: none;
+          flex-direction: row;
+          width: fit-content;
+          height: fit-content;
+          position: static;
+      }
+
+      nav ul li {
+          display: inline-block;
+          color: var(--white);
+          margin: 10px;
+          padding: 10px 20px;
+          transition: all 0.5s linear;
+
+      }
+
+      nav ul li:hover {
+          background-color: rgba(255, 255, 255, 0.286);
+          color: var(--white);
+          border-radius: 20px;
+          text-transform: none;
+      }
+
+      header h1 {
+          margin-top: 150px;
+          font-size: 3rem;
+      }
+
+      header #arrow {
+          padding-top: 60px;
+      }
+
+      /* media query: Section: "gallery-up" */
+      .transform {
+          display: flex;
+          flex-direction: row;
+      }
+
+      .stand-out {
+          display: flex;
+          flex-direction: row;
+      }
+
+      #text-gallery-up,
+      #transform-img,
+      #stand-out-img {
+          width: 50%;
+          margin: auto;
+      }
+
+      .gallery-up h2 {
+          font-size: 2rem;
+          text-align: left;
+          margin: 0 100px 0 100px;
+          padding: 0 0 20px 0;
+      }
+
+      .gallery-up h2 span {
+          display: block;
+      }
+
+      .gallery-up p {
+          font-size: 18px;
+          text-align: left;
+          margin: 0 100px 0 100px;
+          padding: 0 0 20px 0;
+          ;
+      }
+
+      /* media query: Section: "cerise-orange" */
+      #cerise-orange {
+          display: flex;
+          height: 60vh;
+          overflow: hidden;
+      }
+
+      #cerise-orange .mobile-img {
+          display: none;
+      }
+
+      #cerise-orange .desktop-img {
+          display: block;
+      }
+
+      #cerise-orange p {
+          padding: 20PX 180px;
+      }
+
+      /* media query: Section: "testimonials" */
+      #testimonials h4 {
+          margin: 100px 0;
+      }
+
+      #testimonials #cards {
+          display: flex;
+          width: 80%;
+          margin: auto;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      #testimonials #client-card {
+          width: 350px;
+      }
+
+      #testimonials #client-img {
+          margin-bottom: 30px;
+      }
+
+      #testimonials .client-name {
+          padding: 50px 0 5px 0;
+      }
+
+      /* media query: Section: "gallery-down"  */
+      #gallery-down {
+          display: flex;
+          flex-wrap: nowrap;
+      }
+
+      /* media query: Footer */
+      footer ul {
+          display: flex;
+          justify-content: center;
+      }
+
+      footer ul li {
+          margin: 0 20px;
+      }
+
+      footer #social-icons img {
+          margin: 20px 10px;
+      }
   }
