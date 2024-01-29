@@ -360,7 +360,7 @@
       /* media query: header, nav  */
       header {
           background-image: url(/assets/img/desktop/image-header.jpg);
-          height: 100vh;
+          height: 70vh;
       }
 
       nav #burger {
