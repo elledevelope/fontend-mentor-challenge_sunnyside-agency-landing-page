@@ -51,9 +51,13 @@
       height: 50vh;
   }
 
-  header ul {
+  nav .menu {
       display: none;
-      /* background-color: var(--white); */
+  }
+
+  .menu.active {
+      display: block;
+      background-color: var(--white);
       width: 90%;
       height: 35vh;
       display: flex;
@@ -65,23 +69,20 @@
       top: 20px;
   }
 
-  header ul li {
-      display: none;
+  nav .menu li {
       color: var(--grayish-blue);
       font-size: 1.2rem;
       margin: 15px;
       padding: 10px 20px;
       transition: all 0.5s linear;
-
   }
 
-  header ul li:hover {
+  nav .menu li:hover {
       background-color: var(--yellow);
       border-radius: 20px;
       color: black;
       text-transform: uppercase;
       /* font-family: 'Fraunces';  */
-
   }
 
   nav #logo {
@@ -91,7 +92,7 @@
   nav #burger {
       width: 20px;
       height: 20px;
-      display: none;
+      /* display: none; */
   }
 
   nav {
@@ -162,16 +163,38 @@
       text-align: center;
       text-transform: uppercase;
       font-size: .9rem;
-      border-bottom: 5px solid var(--yellow);
+      /* border-bottom: 5px solid var(--yellow); */
       cursor: pointer;
       margin: auto;
       margin-bottom: 40px;
       width: fit-content;
+      position: relative;
+      z-index: 1;
+  }
+  
+  #line-yellow {
+      background-color: var(--yellow);
+      border-radius: 10px;
+      width: 120px;
+      height: 7px;
+      position: absolute;
+      bottom: 5%;
+      left: -7px;
+      z-index: -1;    
   }
 
-  .gallery-up .btn-pink {
-      border-bottom: 5px solid var(--soft-red);
+  #line-pink {
+    background-color: var(--soft-red);
+    border-radius: 10px;
+    width: 120px;
+    height: 7px;
+    position: absolute;
+    bottom: 5%;
+    left: -7px;
+    z-index: -1; 
   }
+
+  #line-pink {}
 
   /* -------------------------------------------------  Section: "cerise-orange" ------------------------------------------------------ */
 
@@ -188,15 +211,9 @@
       position: relative;
   }
 
-  /* #cerise-orange #cerise-img img {
-      display: block;
-      border: none;
-      outline: none;
-  } */
-
   #cerise-orange #text {
       position: absolute;
-      top: 350px;
+      top: 450px;
       text-align: center;
   }
 
@@ -270,12 +287,11 @@
   #gallery-down {
       display: flex;
       flex-wrap: wrap;
+      width: 100%;
   }
 
-  #gallery-down img {
-      display: block;
-      border: none;
-      outline: none;
+  #gallery-down div {
+      width: 100%;
   }
 
   /* ----------------------------------------------------- Footer ---------------------------------------------------------- */
@@ -351,7 +367,7 @@
           display: none;
       }
 
-      nav ul {
+      nav .menu {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -362,7 +378,7 @@
           position: static;
       }
 
-      nav ul li {
+      nav .menu li {
           display: inline-block;
           color: var(--white);
           margin: 10px;
