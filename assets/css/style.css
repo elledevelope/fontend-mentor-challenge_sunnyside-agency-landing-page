@@ -1,0 +1,293 @@
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+  /* CSS RESET */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  img,
+  input {
+      width: 100%;
+  }
+
+  body {
+      --soft-red: hsl(7, 99%, 70%);
+      --yellow: hsl(51, 100%, 49%);
+      --dark-desaturated-cyan: hsl(167, 40%, 24%);
+      /*  (graphic design text) */
+      --dark-blue: hsl(198, 62%, 26%);
+      /*  (photography text) */
+      --dark-moderate-cyan: hsl(168, 34%, 41%);
+      /*  (footer) */
+      --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+      --very-dark-grayish-blue: hsl(213, 9%, 39%);
+      --dark-grayish-blue: hsl(232, 10%, 55%);
+      --grayish-blue: hsl(210, 4%, 67%);
+      --white: hsl(0, 0%, 100%);
+      /* font-family: 'Fraunces'; */
+      font-family: 'Barlow';
+  }
+
+  header {
+      background-image: url(/assets/img/mobile/image-header.jpg);
+      background-attachment: fixed;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      height: 50vh;
+  }
+
+  header ul {
+      display: none;
+  }
+
+  /* --------------- nav --------------- */
+  /* --------------- nav --------------- */
+  /* --------------- nav --------------- */
+  nav #logo {
+      width: 120px;
+  }
+
+  nav #burger {
+      width: 20px;
+      height: 20px;
+  }
+
+  nav {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+  }
+
+  header h1 {
+      color: var(--white);
+      font-family: 'Fraunces';
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 100px;
+  }
+
+  header #arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      margin: auto;
+      padding-top: 40px;
+  }
+
+
+  /* Section: "gallery-up"  */
+  /* Section: "gallery-up"  */
+  .transform {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  .transform span {
+      display: block;
+  }
+
+  .gallery-up h2 {
+      font-family: 'Fraunces';
+      font-weight: 900;
+      text-align: center;
+      padding-top: 40px;
+      color: var(--very-dark-desaturated-blue);
+  }
+
+  .gallery-up p {
+      text-align: center;
+      font-weight: 600;
+      color: var(--dark-grayish-blue);
+      padding: 20px;
+      line-height: 25px;
+  }
+
+  .gallery-up .btn {
+      background-color: rgba(255, 255, 255, 0);
+      font-family: 'Fraunces';
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: .9rem;
+      border-bottom: 5px solid var(--yellow);
+      cursor: pointer;
+      margin: auto;
+      margin-bottom: 40px;
+      width: fit-content;
+  }
+
+  .gallery-up .btn-pink {
+      border-bottom: 5px solid var(--soft-red);
+  }
+
+  /* Section: "cerise-orange"  */
+  /* Section: "cerise-orange"  */
+  #cerise-orange #cerise,
+  #orange {
+      position: relative;
+  }
+
+  #cerise-orange #cerise-img img {
+      display: block;
+      border: none;
+      outline: none;
+  }
+
+
+  #cerise-orange #text {
+      position: absolute;
+      top: 350px;
+      text-align: center;
+  }
+
+  #cerise-orange h3 {
+      font-family: 'Fraunces';
+      font-weight: 900;
+  }
+
+  #cerise-orange p {
+      font-weight: 600;
+      padding: 20px;
+      line-height: 25px;
+      color: var(---dark-desaturated-cyan);
+  }
+
+  #cerise h3,
+  p {
+      color: var(---dark-blue);
+  }
+
+  /* Section: "testimonials" */
+  /* Section: "testimonials" */
+  /* Section: "testimonials" */
+  #testimonials h4 {
+      font-family: 'Fraunces';
+      font-weight: 900;
+      text-align: center;
+      margin: 40px 0;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--dark-grayish-blue);
+  }
+
+  #testimonials #client-card {
+      text-align: center;
+  }
+
+  #testimonials #client-img {
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+  }
+
+  #testimonials #client-img img {
+      display: block;
+      width: 90px;
+      height: 90px;
+      margin: auto;
+  }
+
+  #testimonials p {
+      font-weight: 600;
+      padding: 20px;
+      line-height: 25px;
+      text-align: center;
+      color: var(--very-dark-grayish-blue);
+      padding: 0;
+  }
+
+  #testimonials .client-name {
+      font-family: 'Fraunces';
+      font-weight: 900;
+      text-align: center;
+      color: var(--dark-blue);
+      padding: 15px 0 5px 0;
+  }
+
+  #testimonials .client-profession {
+      font-weight: 600;
+      font-size: .9rem;
+      color: var(--grayish-blue);
+      padding-bottom: 50px;
+  }
+
+  /*  Section: "gallery-down" */
+  /*  Section: "gallery-down" */
+  /*  Section: "gallery-down" */
+  #gallery-down {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  #gallery-down img {
+      display: block;
+      border: none;
+      outline: none;
+  }
+
+  /* Footer */
+  /* Footer */
+  /* Footer */
+  footer {
+      background-color: var(--dark-moderate-cyan);
+  }
+
+  footer #social-icons img {
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+  }
+
+  footer #social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  footer #logo-footer {
+      width: 150px;
+      margin: auto;
+      padding: 50px 0;
+  }
+
+  footer ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      padding-bottom: 70px;
+      color: var(--dark-desaturated-cyan);
+  }
+
+  footer ul li:hover {
+      color: var(--white);
+      cursor: pointer;
+  }
+
+  footer #social-icons img:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+  .attribution {
+      text-align: center;
+      font-size: .7rem;
+      font-weight: 400;
+      padding: 20px;
+      color: var(--dark-blue);
+  }
+
+  .attribution a {
+      text-decoration: none;
+      cursor: pointer;
+      color: var(--dark-blue);
+  }
